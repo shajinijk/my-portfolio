@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CodeIcon, DatabaseIcon, TerminalIcon } from '@heroicons/react/solid'; // Updated Heroicons
-import profileImage from '../assets/profile.jpeg';
+import profile from '../assets/thusha.jpeg';
 
 function About() {
   const skills = [
@@ -48,7 +48,7 @@ function About() {
 
           <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden shadow-2xl">
             <img
-              src={profileImage} // Replace with your image URL
+              src={profile} // Replace with your image URL
               alt="Shajini"
               className="w-full h-full object-cover"
             />
