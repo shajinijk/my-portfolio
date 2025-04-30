@@ -47,7 +47,7 @@ function Resume() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <motion.a
-            href="/Thushajini_Jeyakumar.pdf"
+            href="Thushajini_Jeyakumar.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
