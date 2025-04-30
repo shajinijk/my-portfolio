@@ -1,0 +1,22 @@
+@keyframes borderAnimation {
+  0% {
+    border-color: #3b82f6; /* Initial border color (blue) */
+    border-width: 4px; /* Initial width */
+  }
+  50% {
+    border-color: #10b981; /* Midpoint border color (green) */
+    border-width: 6px; /* Thicker border */
+  }
+  100% {
+    border-color: #3b82f6; /* Return to original border color */
+    border-width: 4px; /* Return to original border width */
+  }
+}
+
+.border-animate {
+  animation: borderAnimation 2s infinite; /* Apply the animation with a 2s duration, infinitely repeating */
+}
+
+.main-content {
+  margin-top: 80px; /* Adjust the value to match your navbar's height */
+}
