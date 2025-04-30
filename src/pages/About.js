@@ -70,21 +70,36 @@ function About() {
       />
 
       {/* Skills Section (4 Columns) */}
-      <div className="w-full max-w-4xl mx-auto">
+      <motion.div
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 1 },
+        }}
+        initial={{ opacity: 0, y: 50 }}
+        className="w-full max-w-4xl mx-auto"
+        viewport={{ once: false, amount: 0.5 }}
+      >
         <h4 className="text-xl font-semibold text-blue-600 mb-6 text-left">Skills</h4>
 
         {/* Grid of Skills (4 Columns) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {skills.map((skill) => (
+          {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.1 }}
-              whileHover={{
-                scale: 1.05,
-                transition: { duration: 0.3 },
+              transition={{
+                delay: 0.2 * index, // Stagger delay for each skill
+                duration: 0.8,
+                ease: 'easeInOut',
               }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                transition: { duration: 1 },
+              }}
+              viewport={{ once: false, amount: 0.5 }} // Each skill animates when it comes into view
               className="bg-gradient-to-r from-indigo-500 to-blue-600 p-4 rounded-lg shadow-md hover:shadow-lg transition-all"
             >
               <div className="flex items-center justify-between mb-4">
@@ -106,7 +121,7 @@ function About() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
